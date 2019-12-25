@@ -435,7 +435,7 @@ module.exports = function(grunt) {
     'cssmin',
     'usemin',
     'nwjs',
-    'toolchain'
+    //'toolchain'
   ]
   .concat(distCommands)
   .concat([
