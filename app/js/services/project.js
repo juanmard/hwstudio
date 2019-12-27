@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('hwstudio')
-  .service('project', function ($rootScope,
+export default class ProjectService {
+  constructor(
+    $rootScope,
     graph,
     boards,
     compiler,
@@ -11,7 +12,8 @@ angular.module('hwstudio')
     gui,
     gettextCatalog,
     nodeFs,
-    nodePath) {
+    nodePath
+  ) {
 
     this.name = '';  // Used in File dialogs
     this.path = '';  // Used in Save / Save as
@@ -670,4 +672,5 @@ angular.module('hwstudio')
       graph.resetCommandStack();
     };
 
-  });
+  }
+}

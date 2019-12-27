@@ -6,9 +6,10 @@ module.exports = function(grunt) {
     'index.html',
     'package.json',
     'fonts/**/*.*',
-    'node_modules/**/*.*',
-    'js/**/*.*',
-    'css/**/*.*',
+    //'node_modules/**/*.*',
+    //'js/**/*.*',
+    //'css/**/*.*',
+    'app/**/*.*',
     'resources/**/*.*',
     'views/**/*.*'
   ];
@@ -78,11 +79,11 @@ module.exports = function(grunt) {
             'package.json',
             'resources/**',
             'views/*.html',
-            'node_modules/**', // FIXME|TODO: SHOULD BE BUNDLED
+            //'node_modules/**', // FIXME|TODO: SHOULD BE BUNDLED
             //> !!! TEMPORAL
             'app/main.*',
-            'js/**',
-            'css/**'
+            //'js/**',
+            //'css/**'
             //<
           ]
         },

@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('hwstudio')
-  .service('tools', function (project,
+export default class ToolsService {
+  constructor(
+    project,
     compiler,
     profile,
     collections,
@@ -20,7 +21,8 @@ angular.module('hwstudio')
     nodeRSync,
     nodeAdmZip,
     _package,
-    $rootScope) {
+    $rootScope
+  ) {
 
     var taskRunning = false;
     var resources = [];
@@ -342,8 +344,9 @@ angular.module('hwstudio')
           if (typeof common.DEBUGMODE !== 'undefined' &&
             common.DEBUGMODE === 1) {
 
-            const fs = require('fs');
-            fs.appendFileSync(common.LOGFILE, 'tools._executeLocal>' + command + "\n");
+            // !!! FIXME/TODO not available in browser
+            //const fs = require('fs');
+            //fs.appendFileSync(common.LOGFILE, 'tools._executeLocal>' + command + "\n");
           }
           nodeChildProcess.exec(command,
             { maxBuffer: 5000 * 1024 },  // To avoid buffer overflow
@@ -1266,4 +1269,5 @@ angular.module('hwstudio')
 
     };
 
-  });
+  }
+}

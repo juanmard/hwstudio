@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('hwstudio')
-  .controller('MenuCtrl', function ($rootScope,
+export default class MenuController {
+  constructor($rootScope,
     $scope,
     $timeout,
     boards,
@@ -17,8 +17,8 @@ angular.module('hwstudio')
     gui,
     _package,
     nodeFs,
-    nodePath) {
-
+    nodePath
+  ) {
     //-- Initialize scope
 
     $scope.profile = profile;
@@ -39,7 +39,6 @@ angular.module('hwstudio')
     var buildUndoStack = [];
     var changedUndoStack = [];
     var currentUndoStack = [];
-
 
     // Window events
     var win = gui.Window.get();
@@ -79,11 +78,11 @@ angular.module('hwstudio')
 
       var params = (val === queryStr) ? false : val;
       // If there are url params, compatibilize it with shell call
-        if (typeof gui.App.argv === 'undefined') {
-          gui.App.argv = [];
-        }
+      if (typeof gui.App.argv === 'undefined') {
+        gui.App.argv = [];
+      }
 
-        var prop;
+      var prop;
       if (params !== false) {
         params = JSON.parse(decodeURI(params));
         for ( prop in params) {
@@ -94,10 +93,10 @@ angular.module('hwstudio')
 
       if(window.opener.opener !== null){
         argv=[];
-    }
+      }
 
       if(params !==false){
-         for (prop in params) {
+        for (prop in params) {
           argv.push(params[prop]);
         }
       }
@@ -1036,4 +1035,5 @@ angular.module('hwstudio')
 
 
 
-  });
+  }
+}
