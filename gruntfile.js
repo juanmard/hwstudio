@@ -80,6 +80,7 @@ module.exports = function(grunt) {
             'views/*.html',
             'node_modules/**', // FIXME|TODO: SHOULD BE BUNDLED
             //> !!! TEMPORAL
+            'app/main.*',
             'js/**',
             'css/**'
             //<
@@ -87,7 +88,7 @@ module.exports = function(grunt) {
         },
         {
           expand: true,
-          cwd: 'app/node_modules/bootstrap/fonts',
+          cwd: 'app/app/fonts',
           dest: 'dist/tmp/fonts',
           src: '*.*'
         }

@@ -212,10 +212,9 @@ concat-stream@1.6.2:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
-copy-paste@~1.3.0:
+"copy-paste@https://github.com/PKief/node-copy-paste#adjust-platform-require":
   version "1.3.0"
-  resolved "https://registry.yarnpkg.com/copy-paste/-/copy-paste-1.3.0.tgz#a7e6c4a1c28fdedf2b081e72b97df2ef95f471ed"
-  integrity sha1-p+bEocKP3t8rCB5yuX3y75X0ce0=
+  resolved "https://github.com/PKief/node-copy-paste#a155b1af3826e3b5455803c50e7eded3a320fe56"
   dependencies:
     iconv-lite "^0.4.8"
   optionalDependencies:

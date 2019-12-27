@@ -5,11 +5,15 @@
   "repository": "https://github.com/umarcor/hwstudio",
   "license": "GPL-2.0",
   "scripts": {
-    "dist": "grunt dist",
+    "dist": "webpack --mode none && grunt dist",
     "gettext": "grunt nggettext_extract",
-    "postinstall": "npmpd && cd app && yarn && cd .. && grunt getcollection"
+    "postinstall": "npmpd && cd app && yarn && cd .. && grunt getcollection",
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production"
   },
   "devDependencies": {
+    "css-loader": "^3.4.0",
+    "file-loader": "^5.0.2",
     "grunt": "^1.0.4",
     "grunt-angular-gettext": "^2.5.1",
     "grunt-appimage": "^0.6.0",
@@ -25,7 +29,10 @@
     "grunt-zip": "^0.18.2",
     "load-grunt-tasks": "^5.1.0",
     "npm-platform-dependencies": "^0.1.0",
-    "nw": "0.35.5-sdk"
+    "nw": "0.35.5-sdk",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
   },
   "darwinDependencies": {
     "grunt-appdmg": "^1.0.0"
