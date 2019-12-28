@@ -6,9 +6,7 @@ module.exports = function(grunt) {
     'index.html',
     'package.json',
     'fonts/**/*.*',
-    'node_modules/**/*.*',
-    'js/**/*.*',
-    'css/**/*.*',
+    'app/main.*',
     'resources/**/*.*',
     'views/**/*.*'
   ];
@@ -78,11 +76,7 @@ module.exports = function(grunt) {
             'package.json',
             'resources/**',
             'views/*.html',
-            'node_modules/**', // FIXME|TODO: SHOULD BE BUNDLED
-            //> !!! TEMPORAL
             'app/main.*',
-            'js/**',
-            'css/**'
             //<
           ]
         },
@@ -280,7 +274,7 @@ module.exports = function(grunt) {
     'unzip'
   ]);
   grunt.registerTask('dist', [
-    'jshint',
+    //'jshint',
     'clean:dist',
     'nggettext_compile',
     'copy:dist',
