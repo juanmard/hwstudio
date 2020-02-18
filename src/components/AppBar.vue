@@ -19,7 +19,7 @@
         <v-icon>mdi-view-dashboard</v-icon>
       </v-btn>
     </template>
-    <span>Dashboard</span>
+    <span>{{$t("dashboard")}}</span>
   </v-tooltip>
 
   <!-- TODO:
@@ -35,7 +35,7 @@
         <v-icon>mdi-cube-outline</v-icon>
       </v-btn>
     </template>
-    <span>3D editor</span>
+    <span>{{$t("3DEditor")}}</span>
   </v-tooltip>
 
   <!-- FIXME:
@@ -70,6 +70,7 @@
   <!-- Language selector -->
   <v-select
     :items="Object.keys($i18n.messages)"
+    style="max-width:10%;"
     label="Language"
     v-model="$i18n.locale"
   ></v-select>
@@ -88,7 +89,7 @@
           <v-icon>mdi-chart-histogram</v-icon>
         </v-btn>
       </template>
-      <span>Toggle render stats</span>
+      <span>{{$t("renderStats")}}</span>
     </v-tooltip>
 
     <v-menu

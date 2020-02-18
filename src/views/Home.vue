@@ -32,7 +32,7 @@
             <v-icon large>mdi-code-tags</v-icon>
           </v-btn>
         </template>
-        <span>Source: github.com/umarcor/hwstudio</span>
+        <span>{{$t("codSource")}}: github.com/umarcor/hwstudio</span>
       </v-tooltip>
       <v-tooltip right>
         <template v-slot:activator="{ on }">
@@ -45,7 +45,7 @@
             <v-icon large>mdi-cube-outline</v-icon>
           </v-btn>
         </template>
-        <span>Open demo scene</span>
+        <span>{{$t("openDemo")}}</span>
       </v-tooltip>
     </v-col>
   </v-row>

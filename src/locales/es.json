@@ -1,8 +1,21 @@
 {
   "description": "Editor gráfico para diseños de descripción hardware",
+  "codSource": "Código",
+  "openDemo": "Abrir escena de demostración",
   "closeMenu": "Cerrar menú",
   "newDesign": "Nuevo diseño",
   "loadImport": "Cargar... | Importar...",
+  "save": "Grabar",
+  "saveAs": "Grabar como...",
+  "downloadExport": "Descargar... | Exportar...",
+  "generateBitstream": "Generar bitstream",
+  "settings": "Ajustes",
+  "expand": "Expandir",
+  "collapse": "Minimizar",
+  "warningTool": "Esta herramienta es una prueba de concepto; ¡Espere cambios de última hora!",
+  "dashboard": "Tablero",
+  "3DEditor": "Editor 3D",
+  "renderStats": "Alternar estadísticas de renderizado",
   "layer": "Capa {n}",
   "addLayer": "Añadir nueva capa"
 }

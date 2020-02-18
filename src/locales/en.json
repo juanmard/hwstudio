@@ -1,8 +1,21 @@
 {
   "description": "GUI editor for hardware description design",
+  "codSource": "Source",
+  "openDemo": "Open demo scene",
   "closeMenu": "Close menu",
   "newDesign": "New design",
   "loadImport": "Load... | Import...",
+  "save": "Save",
+  "saveAs": "Save As...",
+  "downloadExport": "Download... | Export...",
+  "generateBitstream": "Generate bitstream",
+  "settings": "Settings",
+  "expand": "Expand",
+  "collapse": "Collapse",
+  "warningTool": "This tool is a proof of concept; expect breaking changes!",
+  "dashboard": "Dashboard",
+  "3DEditor": "3D editor",
+  "renderStats": "Toggle render stats",
   "layer": "Layer {n}",
   "addLayer": "Add new layer"
 }

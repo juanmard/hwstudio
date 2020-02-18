@@ -96,21 +96,21 @@
 
     <v-list-item link disabled>
       <v-list-item-action><v-icon disabled>mdi-content-save</v-icon></v-list-item-action>
-      <v-list-item-content><v-list-item-title>Save</v-list-item-title></v-list-item-content>
+      <v-list-item-content><v-list-item-title>{{$t("save")}}</v-list-item-title></v-list-item-content>
     </v-list-item>
 
     <!-- SAVE AS -->
 
     <v-list-item link disabled>
       <v-list-item-action><v-icon disabled>mdi-content-save-all</v-icon></v-list-item-action>
-      <v-list-item-content><v-list-item-title>Save As...</v-list-item-title></v-list-item-content>
+      <v-list-item-content><v-list-item-title>{{$t("saveAs")}}</v-list-item-title></v-list-item-content>
     </v-list-item>
 
     <!-- DOWNLOAD | EXPORT -->
 
     <v-list-item link disabled>
       <v-list-item-action><v-icon disabled>mdi-download</v-icon></v-list-item-action>
-      <v-list-item-content><v-list-item-title>Download... | Export...</v-list-item-title></v-list-item-content>
+      <v-list-item-content><v-list-item-title>{{$t("downloadExport")}}</v-list-item-title></v-list-item-content>
     </v-list-item>
 
     <v-divider/>
@@ -129,7 +129,7 @@
           <v-list-item-content></v-list-item-content>
         </v-list-item>
       </template>
-      <span>Generate bitstream</span>
+      <span>{{$t("generateBitstream")}}</span>
     </v-tooltip>
 
     <v-list-item link
@@ -137,7 +137,7 @@
       @click="generateBitstream"
     >
       <v-list-item-action><v-icon>mdi-package</v-icon></v-list-item-action>
-      <v-list-item-content><v-list-item-title>Generate bitstream</v-list-item-title></v-list-item-content>
+      <v-list-item-content><v-list-item-title>{{$t("generateBitstream")}}</v-list-item-title></v-list-item-content>
     </v-list-item>
 
     <v-divider v-if="alive" />
@@ -146,7 +146,7 @@
 
     <v-list-item link disabled>
       <v-list-item-action><v-icon disabled>mdi-settings</v-icon></v-list-item-action>
-      <v-list-item-content><v-list-item-title>Settings</v-list-item-title></v-list-item-content>
+      <v-list-item-content><v-list-item-title>{{$t("settings")}}</v-list-item-title></v-list-item-content>
     </v-list-item>
 
     <v-divider/>
@@ -165,7 +165,7 @@
           <v-list-item-content></v-list-item-content>
         </v-list-item>
       </template>
-      <span>Expand</span>
+      <span>{{$t("expand")}}</span>
     </v-tooltip>
 
     <v-list-item link
@@ -173,7 +173,7 @@
       @click="drawerMini=!drawerMini"
     >
       <v-list-item-action><v-icon>mdi-arrow-collapse-left</v-icon></v-list-item-action>
-      <v-list-item-content><v-list-item-title>Collapse</v-list-item-title></v-list-item-content>
+      <v-list-item-content><v-list-item-title>{{$t("collapse")}}</v-list-item-title></v-list-item-content>
     </v-list-item>
 
   </v-list>
@@ -181,7 +181,7 @@
 
   <template v-slot:append v-if="!drawerMini">
     <v-alert type="warning" prominent class="ml-2 mr-2 caption text-center" dense outlined>
-      This tool is a proof of concept; expect breaking changes!
+      {{$t("warningTool")}}
     </v-alert>
   </template>
 
